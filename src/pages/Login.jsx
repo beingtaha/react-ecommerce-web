@@ -10,17 +10,14 @@ function Login()
   const handleLogin = (e) => { e.preventDefault();
 
     // Simple check - agar kuch bhi daala to login ho jaye
-    const correctUsername = "admin";
-    const correctPassword = "admin123";
-    if (username === correctUsername && password === correctPassword)
+    if (username && password)
     {
       localStorage.setItem('isLoggedIn', 'true');
       navigate('/products');
-      alert('Welcome Taha');
     }
     else
     {
-      alert('Username and Password is wrong');
+      alert('Enter Username and Password');
     }
  };
 
@@ -48,5 +45,6 @@ function Login()
     </div>
   );
 }
+
 
 export default Login;
